@@ -1,0 +1,36 @@
+{
+  "name": "genpark-actuator-thermal-torque-throttle-sentinel-skill",
+  "version": "1.0.0",
+  "description": "GenPark AI Agent Skill - Robotic joint actuator thermal dissipation and continuous torque load monitor triggering preventative safety throttling.",
+  "homepage": "https://genpark.ai/mcp",
+  "author": "genpark",
+  "category": "edge-robotics",
+  "tags": [
+    "actuator-protection",
+    "thermal-sentinel",
+    "brushless-motor",
+    "torque-throttle",
+    "hardware-safety"
+  ],
+  "inputs": {
+    "joint_id": {
+      "type": "string"
+    },
+    "current_temp_celsius": {
+      "type": "number"
+    }
+  },
+  "outputs": {
+    "sentinel_event_id": {
+      "type": "string"
+    },
+    "thermal_safety_margin_celsius": {
+      "type": "number"
+    },
+    "protective_throttle_state": {
+      "type": "string"
+    }
+  },
+  "entrypoint": "client.py",
+  "example": "example_usage.py"
+}
